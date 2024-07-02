@@ -1,7 +1,7 @@
 package com.ebrahim.hossain;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class NoSuchElementExceptionExample {
+public class StaleElementReferenceExceptionExample {
 	WebDriver driver;
 	String url = "https://www.tutorialspoint.com/selenium/practice/selenium_automation_practice.php";
 
@@ -31,12 +31,14 @@ public class NoSuchElementExceptionExample {
 	}
 
 	@Test
-	public void testNoSuchElementException() {
+	public void testStaleElementReferenceException() {
+		WebElement element = driver.findElement(By.id("name"));
+		driver.navigate().refresh();
 		try {
-			@SuppressWarnings("unused")
-			WebElement element = driver.findElement(By.id("nonExistentElement"));
-		} catch (NoSuchElementException e) {
-			System.out.println("Element not found: " + e.getMessage());
+			element.click();
+		} catch (StaleElementReferenceException e) {
+			element = driver.findElement(By.id("name"));
+			element.click();
 		}
 	}
 

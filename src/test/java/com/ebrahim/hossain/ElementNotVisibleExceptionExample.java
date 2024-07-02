@@ -1,19 +1,15 @@
 package com.ebrahim.hossain;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class NoSuchElementExceptionExample {
+public class ElementNotVisibleExceptionExample {
 	WebDriver driver;
 	String url = "https://www.tutorialspoint.com/selenium/practice/selenium_automation_practice.php";
 
@@ -31,12 +27,12 @@ public class NoSuchElementExceptionExample {
 	}
 
 	@Test
-	public void testNoSuchElementException() {
+	public void testElementNotVisibleException() {
 		try {
-			@SuppressWarnings("unused")
-			WebElement element = driver.findElement(By.id("nonExistentElement"));
-		} catch (NoSuchElementException e) {
-			System.out.println("Element not found: " + e.getMessage());
+			WebElement element = driver.findElement(By.id("hiddenElement"));
+			element.click();
+		} catch (ElementNotVisibleException e) {
+			System.out.println("Element not visible: " + e.getMessage());
 		}
 	}
 

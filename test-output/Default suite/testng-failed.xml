@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.ebrahim.hossain.StaleElementReferenceExceptionExample">
+      <class name="com.ebrahim.hossain.ElementNotInteractableExceptionExample">
         <methods>
-          <include name="openUrl"/>
-          <include name="testStaleElementReferenceException"/>
           <include name="startChromeBrowser"/>
           <include name="tearDown"/>
+          <include name="openUrl"/>
+          <include name="testElementNotVisibleException"/>
         </methods>
-      </class> <!-- com.ebrahim.hossain.StaleElementReferenceExceptionExample -->
+      </class> <!-- com.ebrahim.hossain.ElementNotInteractableExceptionExample -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

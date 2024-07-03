@@ -1,15 +1,18 @@
 package com.ebrahim.hossain;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
-
+import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class ElementNotVisibleExceptionExample {
+public class ElementNotInteractableExceptionExample {
 	WebDriver driver;
 	String url = "https://www.tutorialspoint.com/selenium/practice/selenium_automation_practice.php";
 
@@ -31,7 +34,7 @@ public class ElementNotVisibleExceptionExample {
 		try {
 			WebElement element = driver.findElement(By.id("hiddenElement"));
 			element.click();
-		} catch (ElementNotVisibleException e) {
+		} catch (ElementNotInteractableException e) {
 			System.out.println("Element not visible: " + e.getMessage());
 		}
 	}

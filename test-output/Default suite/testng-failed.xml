@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.ebrahim.hossain.ElementNotInteractableExceptionExample">
+      <class name="com.ebrahim.hossain.InvalidElementStateExceptionExample">
         <methods>
-          <include name="startChromeBrowser"/>
-          <include name="tearDown"/>
+          <include name="testInvalidElementStateException"/>
           <include name="openUrl"/>
-          <include name="testElementNotVisibleException"/>
+          <include name="tearDown"/>
+          <include name="startChromeBrowser"/>
         </methods>
-      </class> <!-- com.ebrahim.hossain.ElementNotInteractableExceptionExample -->
+      </class> <!-- com.ebrahim.hossain.InvalidElementStateExceptionExample -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

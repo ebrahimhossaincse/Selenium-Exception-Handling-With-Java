@@ -1,22 +1,19 @@
 package com.ebrahim.hossain;
 
-import java.time.Duration;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class ElementNotInteractableExceptionExample {
+public class WebDriverExceptionExample {
 	WebDriver driver;
 	String url = "https://www.tutorialspoint.com/selenium/practice/selenium_automation_practice.php";
 
@@ -34,16 +31,12 @@ public class ElementNotInteractableExceptionExample {
 	}
 
 	@Test
-	public void testElementNotVisibleException() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	public void testWebDriverException() {
 		try {
-			// Wait until the element is visible and clickable
-			WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.id("hiddenElement")));
+			WebElement element = driver.findElement(By.id("anyElement"));
 			element.click();
-		} catch (ElementNotInteractableException e) {
-			System.out.println("Element not interactable: " + e.getMessage());
-		} catch (Exception e) {
-			System.out.println("An unexpected exception occurred: " + e.getMessage());
+		} catch (WebDriverException e) {
+			System.out.println("WebDriver exception: " + e.getMessage());
 		}
 	}
 

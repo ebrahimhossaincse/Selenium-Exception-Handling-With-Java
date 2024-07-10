@@ -2,28 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-02T22:16:20 EDT" name="Default suite" finished-at="2024-07-02T22:16:33 EDT" duration-ms="12988">
+  <suite started-at="2024-07-10T02:23:59 EDT" name="Default suite" finished-at="2024-07-10T02:23:59 EDT" duration-ms="219">
     <groups>
     </groups>
-    <test started-at="2024-07-02T22:16:20 EDT" name="Default test" finished-at="2024-07-02T22:16:33 EDT" duration-ms="12988">
-      <class name="com.ebrahim.hossain.InvalidElementStateExceptionExample">
-        <test-method is-config="true" signature="startChromeBrowser()[pri:0, instance:com.ebrahim.hossain.InvalidElementStateExceptionExample@4c60d6e9]" started-at="2024-07-02T22:16:19 EDT" name="startChromeBrowser" finished-at="2024-07-02T22:16:20 EDT" duration-ms="1232" status="PASS">
+    <test started-at="2024-07-10T02:23:59 EDT" name="Default test" finished-at="2024-07-10T02:23:59 EDT" duration-ms="219">
+      <class name="com.ebrahim.hossain.WebDriverExceptionWithInvalidURLExample">
+        <test-method is-config="true" signature="startChromeBrowser()[pri:0, instance:com.ebrahim.hossain.WebDriverExceptionWithInvalidURLExample@cb0755b]" started-at="2024-07-10T02:23:55 EDT" name="startChromeBrowser" finished-at="2024-07-10T02:23:59 EDT" duration-ms="3782" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startChromeBrowser -->
-        <test-method is-config="true" signature="openUrl()[pri:0, instance:com.ebrahim.hossain.InvalidElementStateExceptionExample@4c60d6e9]" started-at="2024-07-02T22:16:20 EDT" name="openUrl" finished-at="2024-07-02T22:16:23 EDT" duration-ms="2376" status="PASS">
+        <test-method signature="testWebDriverExceptionWithInvalidURL()[pri:0, instance:com.ebrahim.hossain.WebDriverExceptionWithInvalidURLExample@cb0755b]" started-at="2024-07-10T02:23:59 EDT" name="testWebDriverExceptionWithInvalidURL" finished-at="2024-07-10T02:23:59 EDT" duration-ms="17" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- openUrl -->
-        <test-method signature="testInvalidElementStateException()[pri:0, instance:com.ebrahim.hossain.InvalidElementStateExceptionExample@4c60d6e9]" started-at="2024-07-02T22:16:23 EDT" name="testInvalidElementStateException" finished-at="2024-07-02T22:16:33 EDT" duration-ms="10472" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testInvalidElementStateException -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.ebrahim.hossain.InvalidElementStateExceptionExample@4c60d6e9]" started-at="2024-07-02T22:16:33 EDT" name="tearDown" finished-at="2024-07-02T22:16:33 EDT" duration-ms="112" status="PASS">
+        </test-method> <!-- testWebDriverExceptionWithInvalidURL -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.ebrahim.hossain.WebDriverExceptionWithInvalidURLExample@cb0755b]" started-at="2024-07-10T02:23:59 EDT" name="tearDown" finished-at="2024-07-10T02:23:59 EDT" duration-ms="153" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.ebrahim.hossain.InvalidElementStateExceptionExample -->
+      </class> <!-- com.ebrahim.hossain.WebDriverExceptionWithInvalidURLExample -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
